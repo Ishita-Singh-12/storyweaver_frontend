@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryWeaver - AI Story Continuation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-book-open header-icon"></i>
+                <h1 class="header-title">StoryWeaver</h1>
+                <i class="fas fa-sparkles header-icon"></i>
+            </div>
+            <p class="header-subtitle">
+                Start writing your story and let our AI continue it for you. Watch as your narrative unfolds in unexpected ways!
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <div class="card input-card">
+                <div class="card-header">
+                    <i class="fas fa-book-open card-icon"></i>
+                    <h2 class="card-title">Start Your Story</h2>
+                </div>
+                <div class="card-content">
+                    <textarea 
+                        id="storyInput" 
+                        class="story-textarea" 
+                        placeholder="Start your story here... Once upon a time, in a land far away..."
+                        rows="8"
+                    ></textarea>
+                    
+                    <div id="errorMessage" class="error-message hidden"></div>
+                    
+                    <div class="button-section">
+                        <button id="generateBtn" class="generate-btn">
+                            <i class="fas fa-sparkles btn-icon"></i>
+                            <span class="btn-text">Generate Continuation</span>
+                        </button>
+                        <p class="keyboard-tip">Tip: Press Ctrl+Enter (Cmd+Enter on Mac) to generate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Output Section -->
+            <div id="outputCard" class="card output-card hidden">
+                <div class="card-header">
+                    <i class="fas fa-sparkles card-icon"></i>
+                    <h2 class="card-title">Generated Continuation</h2>
+                </div>
+                <div class="card-content">
+                    <div id="loadingState" class="loading-state hidden">
+                        <div class="loading-content">
+                            <i class="fas fa-spinner loading-spinner"></i>
+                            <p class="loading-text">Crafting your story continuation...</p>
+                            <p class="loading-subtext">This may take a few moments</p>
+                        </div>
+                    </div>
+                    <div id="continuationText" class="continuation-text hidden"></div>
+                </div>
+            </div>
+
+            <!-- Instructions -->
+            <div class="card instructions-card">
+                <div class="card-content">
+                    <div class="instructions-grid">
+                        <div class="instruction-item">
+                            <div class="instruction-number">1</div>
+                            <h3 class="instruction-title">Write Your Beginning</h3>
+                            <p class="instruction-text">Start with an interesting opening to your story</p>
+                        </div>
+                        <div class="instruction-item">
+                            <div class="instruction-number">2</div>
+                            <h3 class="instruction-title">Generate Continuation</h3>
+                            <p class="instruction-text">Click the button to let AI continue your story</p>
+                        </div>
+                        <div class="instruction-item">
+                            <div class="instruction-number">3</div>
+                            <h3 class="instruction-title">Enjoy & Iterate</h3>
+                            <p class="instruction-text">Use the continuation as inspiration for more writing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
