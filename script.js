@@ -1,6 +1,6 @@
 class StoryGenerator {
   constructor() {
-    this.backendURL = "https://storyweaver-backend-iu4q.onrender.com/generate";
+    this.backendURL = "https://storyweaver-backend-1-9jsi.onrender.com/generate";
     this.initializeElements();
     this.bindEvents();
     this.isLoading = false;
